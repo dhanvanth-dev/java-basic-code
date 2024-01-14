@@ -1,0 +1,24 @@
+public class Patterns {
+    public static void hollow_rectangle(int totRows,int totCols ){
+        //outerloop
+        for (int i=1 ; i<=totRows ; i++){
+            //inner -columns
+            for(int j=1 ; j<=totCols; j++){
+                //cell-(i,j)
+                if(i==1 || i==totRows || j==1 || j==totCols){
+                    //boundary cell printing
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            //breaking columns for loop and coming to next line
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        //calling fn
+        hollow_rectangle(4,5);
+
+    }
+}
